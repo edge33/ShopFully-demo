@@ -27,7 +27,7 @@ class layout extends Component {
     return (
       <Aux>
         <Drawer open={this.state.isDrawerOpened} onClose={(event) => this.toggleDrawer(event, false)}>
-          <p style={{padding: "20px"}}>some content</p>
+          <p>some content</p>
         </Drawer>
         <AppBar position="static">
           <Toolbar>
