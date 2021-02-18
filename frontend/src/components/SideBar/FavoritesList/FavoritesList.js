@@ -6,10 +6,6 @@ import Divider from '@material-ui/core/Divider'
 import HomeIcon from '@material-ui/icons/Home'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 
-const ListItemLink = (props) => {
-  return <ListItem button component="a" {...props} />
-}
-
 const favoritesList = (props) => {
   const items = ['one', 'two', 'three'].map((item, i) => (
     <ListItem button key={i}>

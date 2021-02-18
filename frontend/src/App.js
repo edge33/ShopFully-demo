@@ -1,8 +1,9 @@
 import { Component } from 'react'
 
-import Layout from './hoc/Layout/Layout'
 import Drawer from './components/SideBar/Drawer/Drawer'
 import FavoritesList from './components/SideBar/FavoritesList/FavoritesList'
+import FlyersContainer from './containers/Flyers/FlyersContainer'
+import Layout from './hoc/Layout/Layout'
 
 class App extends Component {
   state = {
@@ -23,9 +24,9 @@ class App extends Component {
     return (
       <Layout openDrawer={this.toggleDrawer}>
         <Drawer open={this.state.isDrawerOpened} closed={(event) => this.toggleDrawer(event)}>
-          <FavoritesList/>
+          <FavoritesList />
         </Drawer>
-        <h2>Container</h2>
+        <FlyersContainer></FlyersContainer>
       </Layout>
     )
   }
