@@ -4,6 +4,12 @@ import flyerMapper from '../models/flyer/flyerMapper';
 import { loadFile } from '../fileLoading/fileLoader';
 import Flyer from '../models/flyer/FlyerInterface';
 
+/** 
+ * Retrives the flyers based on query string values
+ * filters out unpublished flyers
+ * note: I did not check fore expire date because every flyer has endDate in 2019
+ * I used flyerMapper to cast the data to a strongy typed model to work on.
+*/
 export const getFlyers = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   const limit = isNaN(+req.query.limit) || +req.query.limit <= 0 ? 100 : +req.query.limit;
   const page = isNaN(+req.query.page) || +req.query.page <= 1 ? 0 : +req.query.page - 1;
