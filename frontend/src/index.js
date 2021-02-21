@@ -1,22 +1,18 @@
-import flyersReducer from './store/reducers/flyers'
-import { createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
+import 'react-app-polyfill/ie11'
+import 'react-app-polyfill/stable'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
 
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-const store = createStore(flyersReducer, applyMiddleware(thunk))
+// const store = createStore(flyersReducer, applyMiddleware(thunk))
 
 const app = (
-  <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 )
 
 ReactDOM.render(app, document.getElementById('root'))
