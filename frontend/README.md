@@ -10,7 +10,7 @@ In the project directory, you can run:
 
 Runs the app in the development mode.
 
-Note: it runs a proxy for localhost:8080 in order tu use api in dev mode
+Note: it runs a proxy for localhost:8000 in order tu use api in dev mode
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
