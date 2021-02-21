@@ -18,10 +18,10 @@ module.exports = {
 
     // disable rules from base configurations
     'no-console': 'off',
-    'no-unused-vars': 'warn',
     'no-undef': 'off',
 
     '@typescript-eslint/no-extra-semi': ['error'],
-    '@typescript-eslint/semi': ['error']
+    '@typescript-eslint/semi': ['error'],
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: 'next' }]
   }
 };

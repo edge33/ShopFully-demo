@@ -1,9 +1,9 @@
 import csv from 'csv-parser';
 import fs from 'fs';
 
-export const loadFile = (fileName: string): Promise<string[]> => {
-  return new Promise<string[]>((resolve, reject) => {
-    const data: string[] = [];
+export const loadFile = (fileName: string): Promise<Record<string, string>[]> => {
+  return new Promise<Record<string, string>[]>((resolve, reject) => {
+    const data: Record<string, string>[] = [];
     fs.createReadStream(fileName)
       .on('error', () => {
         reject('file not found...');
